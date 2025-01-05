@@ -1,12 +1,16 @@
 from flask import Flask, render_template,request
+from flask_wtf.csrf import CSRFProtect
 from datetime import date
 import smtplib
 import os
 EMAIL = os.getenv('email')
 PASSWORD = os.getenv('pass')
 RECEIVER = os.getenv('rec')
+KEY = os.getenv('key')
 
 app = Flask(__name__)
+app.secret_key = KEY
+csrf = CSRFProtect(app)
 
 @app.route("/")
 def home():
