@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family: 'Cormorant',sans-serif; */
 }
 body{
     box-sizing: border-box;
@@ -130,4 +129,52 @@ body{
     font-size:1.1rem ;
     font-weight: 900;
     text-decoration: underline;
+}
+
+/*--------------------------------responsive media queries-----------------------------*/
+@media(max-width:900px){
+    .top-image{
+        height: 310px;
+    }
+    .main{
+        font-size: 4.5rem;
+    }
+    .sub{
+        font-size: 1.7rem;
+    }
+    .copyright{
+        font-size: 1.4rem;
+    }
+    .about-paragraph{
+        font-size:1.4rem;
+        text-align: start;
+    }
+    .contact-paragraph{
+        font-size:1.4rem;
+        text-align: start;
+    }
+}
+@media(max-width:480px){
+    .top-image{
+        height: 197px;
+    }
+    .main{
+        font-size: 2rem;
+    }
+    .sub{
+        font-size: 0.7rem;
+    }
+    .copyright{
+        font-size: 1rem;
+    }
+    .about-paragraph{
+        font-size:1.4rem;
+        letter-spacing: 0;
+        text-align: start;
+    }
+    .contact-paragraph{
+        font-size:1rem;
+        letter-spacing: 0;
+        text-align: start;
+    }
 }
