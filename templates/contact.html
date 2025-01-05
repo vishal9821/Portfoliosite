@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}contact Me{% endblock title %}
+{% block body %}
+<div class="container-fluid top-image contact">
+    <div class="heading">
+       <h1 class="main">contact me</h1>
+       <h3 class="sub">Have Questions?I have answers</h3>
+   </div>
+</div>
+<div class="container text-center">
+    <p class="contact-paragraph">
+        I'm always eager to connect with other professionals and learn about new opportunities. Please feel free to contact me with any questions, inquiries, or project proposals. I'll do my best to respond to all messages promptly.
+    </p>
+</div>
+<hr class="horizontal-row">
+<div class="container">
+    <form action="/contact" method="post">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" Name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" id="exampleInputPassword1" placeholder="Enter Your Email" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Select your Message Type</label>
+            <select id="disabledSelect" class="form-select" name="messagetype" required>
+              <option>select</option>
+              <option>Feedback</option>
+              <option>Suggesations</option>
+              <option>Enquiry</option>
+              <option>Message</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Your Message</label>
+            <input type="textfield" class="form-control" name="message" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Message" required>
+          </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+</div>
+{% endblock body %}
